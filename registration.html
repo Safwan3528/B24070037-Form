@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Race Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eaeaea;
+    }
+    form {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 8px;
+    }
+    h2 {
+      text-align: center;
+      color: yellow;
+      background-color: black;
+      padding: 10px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .small-input {
+      width: 48%;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #000;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .signature-line {
+      margin-top: 40px;
+      border-bottom: 1px solid #000;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>RACE REGISTRATION FORM</h2>
+
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address">
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label>Title</label>
+      <label><input type="radio" name="title"> Mr.</label>
+      <label><input type="radio" name="title"> Ms.</label>
+      <label><input type="radio" name="title"> Mrs.</label>
+    </div>
+
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" name="first_name" placeholder="Enter your first name">
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" name="last_name" placeholder="Enter your last name">
+    </div>
+
+    <div class="form-group">
+      <label>Complete Postal Mailing Address (with Postal Code & Country)</label>
+      <textarea name="address" rows="3" placeholder="Street address, city, postcode, country"></textarea>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <div class="small-input">
+        <label>Phone</label>
+        <input type="text" name="phone" placeholder="Phone number">
+      </div>
+      <div class="small-input">
+        <label>Fax</label>
+        <input type="text" name="fax" placeholder="Fax number (if any)">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Occupation</label>
+      <input type="text" name="occupation" placeholder="Your current job">
+    </div>
+
+    <div class="form-group">
+      <label>Marital Status</label>
+      <input type="text" name="marital_status" placeholder="Single, Married, etc.">
+    </div>
+
+    <div class="form-group">
+      <label>Emergency Contact</label>
+      <input type="text" name="emergency_name" placeholder="Name">
+      <input type="email" name="emergency_email" placeholder="Email">
+      <input type="text" name="emergency_phone" placeholder="Phone Number">
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label>Select Trip</label>
+      <label><input type="checkbox" name="trip" value="stage_race"> Stage Race</label>
+      <label><input type="checkbox" name="trip" value="everest_marathon"> Mt. Everest Challenge Marathon (4 day trip)</label>
+      <label><input type="checkbox" name="trip" value="bike_rally"> Mt. Everest Bike Rally</label>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label>I am a</label>
+      <label><input type="checkbox" name="type" value="runner"> Runner</label>
+      <label><input type="checkbox" name="type" value="walker"> Walker</label>
+      <label><input type="checkbox" name="type" value="cyclist"> Cyclist</label>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label>T-Shirt Size</label>
+      <label><input type="checkbox" name="size" value="small"> Small</label>
+      <label><input type="checkbox" name="size" value="medium"> Medium</label>
+      <label><input type="checkbox" name="size" value="large"> Large</label>
+      <label><input type="checkbox" name="size" value="xlarge"> X-Large</label>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label>Smoker</label>
+      <label><input type="radio" name="smoker" value="yes"> Yes</label>
+      <label><input type="radio" name="smoker" value="no"> No</label>
+    </div>
+
+    <div class="form-group">
+      <label>Room Sharing Preference</label>
+      <input type="text" name="room_preference" placeholder="Roommate name or gender preference">
+    </div>
+
+    <div class="form-group">
+      <label>Passport Details</label>
+      <input type="text" name="passport_name" placeholder="Exact name as it appears on passport">
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="passport_number" placeholder="Passport Number">
+    </div>
+
+    <div class="form-group checkbox-group">
+      <div class="small-input">
+        <label>Date Issued</label>
+        <input type="date" name="passport_issued_date">
+      </div>
+      <div class="small-input">
+        <label>Date Expires</label>
+        <input type="date" name="passport_expiry">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Where Issued</label>
+      <input type="text" name="passport_issued_place" placeholder="Issuing Authority / Location">
+    </div>
+
+    <div class="form-group checkbox-group">
+      <div class="small-input">
+        <label>Date of Birth</label>
+        <input type="date" name="dob">
+      </div>
+      <div class="small-input">
+        <label>Age</label>
+        <input type="number" name="age" placeholder="Your age">
+      </div>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <div class="small-input">
+        <label>Place of Birth</label>
+        <input type="text" name="place_birth" placeholder="City / Town of birth">
+      </div>
+      <div class="small-input">
+        <label>Citizen of</label>
+        <input type="text" name="citizen" placeholder="Your nationality">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <a href="#" target="_blank">See Booking Conditions for all the trips</a>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label><input type="checkbox" name="agree_terms"> I agree to all booking terms & conditions</label>
+    </div>
+
+    <div class="form-group">
+      <label>Signature</label>
+      <p>(Please sign printed form before mailing)</p>
+      <div class="signature-line"></div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+
+  </form>
+
+</body>
+</html>
